@@ -21,7 +21,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.9,<3.14"
 #qosst-core = "^0.10.0"
-qosst-core = { git = "https://github.com/qosst/qosst-core", branch = "dev" }
+qosst-core = { git = "https://github.com/qosst/qosst-core", branch = "post-processing" }
 
 [tool.poetry.group.dev.dependencies]
 myst-parser = [
