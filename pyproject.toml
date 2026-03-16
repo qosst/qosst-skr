@@ -1,45 +1,43 @@
-[tool.poetry]
+[project]
 name = "qosst-skr"
-version = "0.10.0"
 description = "Secret Key Rate (SKR) submodule of QOSST, with the different methods to compute the Secret Key Rate."
-authors = ["Yoann Piétri <Yoann.Pietri@lip6.fr>"]
-packages = [{ include = "qosst_skr" }, { include = "qosst_skr/py.typed" }]
-license = "GPLv3"
+authors = [{ name = "Yoann Piétri", email = "Yoann.Pietri@lip6.fr" }]
+license = "GPL-3.0-only"
 readme = "README.md"
-homepage = "https://github.com/qosst"
-repository = "https://github.com/qosst/qosst-skr"
-documentation = "https://qosst-skr.readthedocs.io/"
+
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Topic :: Scientific/Engineering :: Physics",
     "Topic :: Security :: Cryptography",
 ]
-[tool.poetry.dependencies]
-python = ">=3.9,<3.14"
-#qosst-core = "^0.10.0"
-qosst-core = { git = "https://github.com/qosst/qosst-core", branch = "dev" }
+
+requires-python = ">=3.10, <3.15"
+dynamic = ["version"]
+
+dependencies = ["qosst-core @ git+https://github.com/qosst/qosst-core@dev"]
+
+[project.urls]
+homepage = "https://github.com/qosst"
+repository = "https://github.com/qosst/qosst-skr"
+documentation = "https://qosst-skr.readthedocs.io/"
+
+
+[tool.poetry]
+
+version = "0.10.0.dev0"
+packages = [{ include = "qosst_skr" }, { include = "qosst_skr/py.typed" }]
 
 [tool.poetry.group.dev.dependencies]
-myst-parser = [
-    { version = "^1.0.0", python = ">=3.9, <3.10" },
-    { version = "^4.0.0", python = ">=3.10, <3.14" },
-]
-Sphinx = [
-    { version = "^5.0.0", python = ">=3.9, <3.10" },
-    { version = "^8.1.0", python = ">=3.10, <3.14" },
-]
-sphinx-rtd-theme = [
-    { version = "^1.0.0", python = ">=3.9, <3.10" },
-    { version = "^3.0.0", python = ">=3.10, <3.14" },
-]
-setuptools = "^67.6.1"
+myst-parser = "^4.0.0"
+Sphinx = "^8.1.0"
+sphinx-rtd-theme = "^3.0.0"
+setuptools = "^82.0.1"
 docstr-coverage = "^2.2.0"
-pylint = "^3.3.0"
-black = "^23.3.0"
+pylint = "^4.0.5"
+black = "^26.3.1"
 mypy = "^1.3.0"
 sphinx-prompt = "^1.5.0"
 
