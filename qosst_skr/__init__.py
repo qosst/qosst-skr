@@ -22,4 +22,4 @@ from .gaussian_trusted_homodyne_asymptotic import GaussianTrustedHomodyneAsympto
 from .gaussian_untrusted_homodyne_asymptotic import GaussianUntrustedHomodyneAsymptotic
 from .gaussian_trusted_heterodyne_asymptotic import GaussianTrustedHeterodyneAsymptotic
 
-__version__ = "0.10.0"
+__version__ = "0.10.0.dev0"
